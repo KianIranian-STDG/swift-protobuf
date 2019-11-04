@@ -282,6 +282,9 @@
 		BCCA0E6A1DB1210E00957D74 /* TextFormatEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCA0E671DB1210E00957D74 /* TextFormatEncoder.swift */; };
 		BCCA0E6B1DB1210E00957D74 /* Message+TextFormatAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCA0E681DB1210E00957D74 /* Message+TextFormatAdditions.swift */; };
 		BCCA0E7A1DB124B800957D74 /* Test_TextFormat_proto3.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCA0E751DB123F800957D74 /* Test_TextFormat_proto3.swift */; };
+		D66B6EC7237048B50030EC69 /* Request.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B6EC4237048B40030EC69 /* Request.pb.swift */; };
+		D66B6EC8237048B50030EC69 /* Response.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B6EC5237048B40030EC69 /* Response.pb.swift */; };
+		D66B6EC9237048B50030EC69 /* iGapMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B6EC6237048B40030EC69 /* iGapMessage.swift */; };
 		DB2E0AFA1EB24C7600F59319 /* Test_JSON_Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2E0AF91EB24C7600F59319 /* Test_JSON_Array.swift */; };
 		DB2E0AFB1EB24C7600F59319 /* Test_JSON_Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2E0AF91EB24C7600F59319 /* Test_JSON_Array.swift */; };
 		DB2E0AFC1EB24C7600F59319 /* Test_JSON_Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2E0AF91EB24C7600F59319 /* Test_JSON_Array.swift */; };
@@ -773,6 +776,9 @@
 		BCCA0E671DB1210E00957D74 /* TextFormatEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFormatEncoder.swift; sourceTree = "<group>"; };
 		BCCA0E681DB1210E00957D74 /* Message+TextFormatAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Message+TextFormatAdditions.swift"; sourceTree = "<group>"; };
 		BCCA0E751DB123F800957D74 /* Test_TextFormat_proto3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test_TextFormat_proto3.swift; sourceTree = "<group>"; };
+		D66B6EC4237048B40030EC69 /* Request.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.pb.swift; sourceTree = "<group>"; };
+		D66B6EC5237048B40030EC69 /* Response.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.pb.swift; sourceTree = "<group>"; };
+		D66B6EC6237048B40030EC69 /* iGapMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iGapMessage.swift; sourceTree = "<group>"; };
 		DB2E0AF91EB24C7600F59319 /* Test_JSON_Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test_JSON_Array.swift; sourceTree = "<group>"; };
 		DB2E0AFD1EB25D1D00F59319 /* Message+JSONArrayAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = "Message+JSONArrayAdditions.swift"; sourceTree = "<group>"; tabWidth = 2; };
 		E7038A23224D7F1000B68775 /* Data+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
@@ -954,6 +960,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D66B6EC3237048A80030EC69 /* iGap */ = {
+			isa = PBXGroup;
+			children = (
+				D66B6EC6237048B40030EC69 /* iGapMessage.swift */,
+				D66B6EC4237048B40030EC69 /* Request.pb.swift */,
+				D66B6EC5237048B40030EC69 /* Response.pb.swift */,
+			);
+			path = iGap;
+			sourceTree = "<group>";
+		};
 		"___RootGroup_" = {
 			isa = PBXGroup;
 			children = (
@@ -1009,6 +1025,7 @@
 		"_______Group_Protobuf" /* SwiftProtobuf */ = {
 			isa = PBXGroup;
 			children = (
+				D66B6EC3237048A80030EC69 /* iGap */,
 				F41BA43F1E7AE4AC004F6E95 /* any.pb.swift */,
 				F41BA4411E7AE53C004F6E95 /* AnyMessageStorage.swift */,
 				F41BA4171E79C568004F6E95 /* AnyUnpackError.swift */,
@@ -1641,6 +1658,7 @@
 				__src_cc_ref_Sources/Protobuf/ProtobufTypes.swift /* FieldTypes.swift in Sources */,
 				F4E852B61EE9D83C00AE837E /* SelectiveVisitor.swift in Sources */,
 				AA3640911E60D043000C3CF4 /* struct.pb.swift in Sources */,
+				D66B6EC8237048B50030EC69 /* Response.pb.swift in Sources */,
 				__src_cc_ref_Sources/Protobuf/field_mask.pb.swift /* field_mask.pb.swift in Sources */,
 				__src_cc_ref_Sources/Protobuf/Google_Protobuf_Duration_Extensions.swift /* Google_Protobuf_Duration+Extensions.swift in Sources */,
 				__src_cc_ref_Sources/Protobuf/Google_Protobuf_FieldMask_Extensions.swift /* Google_Protobuf_FieldMask+Extensions.swift in Sources */,
@@ -1665,6 +1683,7 @@
 				9C75F8A31DDD44A1005CCFF2 /* ProtobufMap.swift in Sources */,
 				F41BA4181E79C568004F6E95 /* AnyUnpackError.swift in Sources */,
 				__src_cc_ref_Sources/Protobuf/ProtobufMessage.swift /* Message.swift in Sources */,
+				D66B6EC7237048B50030EC69 /* Request.pb.swift in Sources */,
 				__src_cc_ref_Sources/Protobuf/ProtobufExtensions.swift /* MessageExtension.swift in Sources */,
 				F4539D2A1E6F5DC70076251F /* CustomJSONCodable.swift in Sources */,
 				__src_cc_ref_Sources/Protobuf/ProtobufBinaryDecoding.swift /* BinaryDecoder.swift in Sources */,
@@ -1692,6 +1711,7 @@
 				__src_cc_ref_Sources/Protobuf/type.pb.swift /* type.pb.swift in Sources */,
 				__src_cc_ref_Sources/Protobuf/ProtobufUnknown.swift /* UnknownStorage.swift in Sources */,
 				F49B576B2252771700350FFD /* TextFormatEncodingOptions.swift in Sources */,
+				D66B6EC9237048B50030EC69 /* iGapMessage.swift in Sources */,
 				AAB979F51E7066D8003DC2F4 /* Google_Protobuf_ListValue+Extensions.swift in Sources */,
 				AA28A4A91DA40B0900C866D9 /* Varint.swift in Sources */,
 				9C75F8801DDBE0DE005CCFF2 /* Visitor.swift in Sources */,
@@ -2245,6 +2265,56 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5A82E34D2455D71400EB0A70 /* Base_Release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.7.0;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_VERSION = 5.0;
+				USE_HEADERMAP = NO;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -2252,6 +2322,61 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5A82E34C2455D71400EB0A70 /* Base_Debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.7.0;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_VERSION = 5.0;
+				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};

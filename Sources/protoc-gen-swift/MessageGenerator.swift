@@ -113,11 +113,35 @@ class MessageGenerator {
       }
     }
 
-    let conformances: String
+    /************************* Start ***************************/
+    /******************* iGap Generate Class *******************/
+    enum MessageType {
+        case general
+        case response
+        case request
+    }
+    var type = MessageType.general
+    for f in fields {
+        if f.fieldMapNames == ".standard(proto: \"IGP_request\")" {
+            type = MessageType.request
+        } else if f.fieldMapNames == ".standard(proto: \"IGP_response\")" {
+            type = MessageType.response
+        }
+    }
+    var conformances: String
+    switch type {
+    case .general:
+        conformances = ": SwiftProtobuf.Message"
+    case .response:
+        conformances = ": SwiftProtobuf.ResponseMessage"
+    case .request:
+        conformances = ": SwiftProtobuf.RequestMessage"
+    }
+    /******************* iGap Generate Class *******************/
+    /************************** End ****************************/
+    
     if isExtensible {
-      conformances = ": \(namer.swiftProtobufModuleName).ExtensibleMessage"
-    } else {
-      conformances = ""
+        conformances = ": SwiftProtobuf.ExtensibleMessage"
     }
     p.print(
         "\n",
@@ -197,7 +221,7 @@ class MessageGenerator {
   func generateRuntimeSupport(printer p: inout CodePrinter, file: FileGenerator, parent: MessageGenerator?) {
     p.print(
         "\n",
-        "extension \(swiftFullName): \(namer.swiftProtobufModuleName).Message, \(namer.swiftProtobufModuleName)._MessageImplementationBase, \(namer.swiftProtobufModuleName)._ProtoNameProviding {\n")
+        "extension \(swiftFullName): SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {\n")
     p.indent()
 
     if let parent = parent {

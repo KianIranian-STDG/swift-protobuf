@@ -84,12 +84,12 @@ class GeneratorOptions {
     self.outputNaming = outputNaming
     self.visibility = visibility
 
-    switch visibility {
-    case .Internal:
-      visibilitySourceSnippet = ""
-    case .Public:
+//    switch visibility {
+//    case .Internal:
+//      visibilitySourceSnippet = ""
+//    case .Public:
       visibilitySourceSnippet = "public "
-    }
+//    }
 
   }
 }
